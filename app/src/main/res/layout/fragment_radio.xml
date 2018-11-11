@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_layout_radio_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+            <!--android:id="@+id/radioSwipeRefreshLayout"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+    <!--android:layout_above="@+id/sub_player">-->
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/radioRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:layout_above="@+id/sub_player"/>
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/sub_player"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center|start"
+                android:textColor="@color/colorAccent"
+                android:text="Radio station"
+                android:textSize="20sp"/>
+
+            <ImageButton
+                android:id="@+id/playTrigger"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_play_arrow_black"
+                android:background="@null"
+                android:backgroundTint="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+
+
+</RelativeLayout>
